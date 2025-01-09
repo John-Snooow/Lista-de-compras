@@ -1,4 +1,4 @@
-/* resetando e criando variaveis */
+/*Resetando e criando variáveis */
 
 *,
 *::before,
@@ -9,7 +9,7 @@
 }
 
 :root {
-  /* variaveis de cor  */
+  /* variáveis de cor */
   --bg-primary: #f4f5fb;
   --bg-secondary: #ffffff;
   --color-brand: #ca3884;
@@ -35,7 +35,7 @@ body {
   background-color: var(--bg-primary);
 }
 
-/* classes ultilitarias */
+/* Classes utilitárias */
 
 ul[role="list"] {
   list-style: none;
@@ -53,7 +53,7 @@ ul[role="list"] {
   display: flex;
 }
 
-/* classes para JS */
+/*Classes para JS */
 
 .item {
   display: flex;
@@ -64,8 +64,8 @@ ul[role="list"] {
   height: 3rem;
   background-color: var(--bg-secondary);
   border-radius: 0.75rem;
-  color: var(--parag);
-
+  color: var(--content-secondary);
+  font: var(--parag);
   & div {
     display: flex;
     align-items: center;
@@ -96,7 +96,7 @@ ul[role="list"] {
     cursor: pointer;
     border: none;
     background-color: transparent;
-    transition: scale 40ms ease;
+    transition: scale 400ms ease;
     &:hover {
       scale: 1.2;
     }
@@ -111,7 +111,7 @@ ul[role="list"] {
 .alert {
   display: flex;
   width: 100%;
-  height: 2.7rem;
+  height: 2.75rem;
   background-color: var(--danger);
   border-radius: 0.75rem;
   justify-content: space-between;
@@ -154,7 +154,7 @@ ul[role="list"] {
   border-color: var(--danger);
 }
 
-/*estilizações estruturais*/
+/* estilizações estruturais */
 
 main {
   max-width: var(--max-width);
@@ -167,14 +167,14 @@ main {
     display: grid;
     gap: 1rem;
 
-    &span {
+    & span {
       cursor: pointer;
       display: flex;
       gap: 0.25rem;
       color: var(--color-brand);
       font: var(--link-sm);
       transition: filter 200ms ease;
-      &img {
+      & img {
         rotate: 180deg;
       }
 
@@ -183,7 +183,7 @@ main {
       }
     }
 
-    &h1 {
+    & h1 {
       font: var(--title);
       color: var(--content-primary);
     }
@@ -196,10 +196,10 @@ form {
   & input {
     width: 100%;
     height: 2.75rem;
-    border-radius: 0, 75rem;
+    border-radius: 0.75rem;
     border: 2px solid var(--bd-primary);
     padding-left: 1rem;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
     transition: border 400ms ease;
     &::placeholder {
       color: var(--content-tertiary);
@@ -216,10 +216,10 @@ form {
     }
   }
 
-  &button {
+  & button {
     cursor: pointer;
     height: 2.75rem;
-    border-radius: 075rem;
+    border-radius: 0.75rem;
     border: none;
     background-color: var(--color-brand);
     color: #ffffff;
@@ -231,28 +231,32 @@ form {
   }
 }
 
-/*responsividade*/
-@media (max-width: 750px) {
-  :root{
-    max-width: 1280px;
+/* Responsividade */
+
+@media (width >= 750px) {
+  :root {
+    --max-width: 1280px;
   }
 
-  .mobile-not{
+  .mobile-not {
     display: initial;
   }
 
-  header{
+  header {
     max-width: max-content;
     margin-inline: auto;
     padding-top: 1.5rem;
 
-    & img{
+    & img {
       object-fit: cover;
     }
   }
 
-  form{
-    grid-template-columns: 3fr 1fr;
+  main {
+    max-width: 42rem;
   }
 
+  form {
+    grid-template-columns: 3fr 1fr;
+  }
 }

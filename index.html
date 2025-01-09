@@ -7,31 +7,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de compras</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-        <img src="assets/icons/logo.svg" alt="logo" class="mobile-not">
+      <img src="assets/icons/logo.svg" alt="logo" class="mobile-not" />
     </header>
 
     <main>
-        <div id="back">
-            <span><img src="assets/icons/arrow.svg" alt="seta">Voltar</span>
-            <h1>Compras da semana</h1>
+      <div id="back">
+        <span><img src="assets/icons/arrow.svg" alt="seta" />Voltar</span>
+        <h1>Compras da semana</h1>
+      </div>
+
+      <form>
+        <div>
+          <input type="text" placeholder="Adicione um novo item" />
+          <div id="errormensage" class="delet">
+            <img src="assets/icons/circle-red.svg" alt="" />Digite um item para
+            a sua lista
+          </div>
         </div>
 
-        <form>
-            <div>
-                <input type="text" placeholder="Adicione um novo item">
-                <div id="errormensage" class="delet"><img src="assets/icons/circle-red.svg" alt="">Digite um item para a sua lista</div>
-            </div>
-    
-            <button type="submit">Adicionar item</button>
-        </form>
+        <button type="submit">Adicionar item</button>
+      </form>
 
-        <ul [role="list"]></ul>
+      <ul [role="list" ]></ul>
     </main>
     <script src=""></script>
   </body>
