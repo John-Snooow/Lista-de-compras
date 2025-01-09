@@ -232,3 +232,27 @@ form {
 }
 
 /*responsividade*/
+@media (max-width: 750px) {
+  :root{
+    max-width: 1280px;
+  }
+
+  .mobile-not{
+    display: initial;
+  }
+
+  header{
+    max-width: max-content;
+    margin-inline: auto;
+    padding-top: 1.5rem;
+
+    & img{
+      object-fit: cover;
+    }
+  }
+
+  form{
+    grid-template-columns: 3fr 1fr;
+  }
+
+}
