@@ -4,7 +4,7 @@ const input = document.querySelector("input")
 const validateInput = () => input.value.trim().length > 0
 
 const ul = document.querySelector("ul")
-const error = document.querySelector("errormenssaage")
+const error = document.querySelector("errormensssage")
 
 const addNewItem = () =>{
     const inputIsValid = validateInput()
@@ -16,7 +16,7 @@ const addNewItem = () =>{
 
     const li = document.createElement("li")
     li.classList.add("item")
-    li.style.marginBottom = `.75rem`
+    li.style.marginBottom = ` .75rem `// li.style.marginBottom = "0.75rem"
 
     const div = document.createElement("div")
     const checkbox = document.createElement("input")
@@ -36,7 +36,7 @@ const addNewItem = () =>{
         const circle = document.createElement("small")
         circle.innerHTML = `<img src="./assets/icons/warning-circle-filled.svg" alt="">`
         div.prepend(circle)
-        checkbox.remove("input")
+        checkbox.remove("input")//error, não aceita agumentos
         del.remove("button")
 
         const btn = document.createElement("button")
@@ -64,7 +64,7 @@ input.addEventListener("change", () =>{
     }
 })
 
-button.addEventListener("click", () => addNewItem)
+button.addEventListener("click", () => addNewItem())
 
 form.onsubmit = (event) => {
     event.preventDefault()
